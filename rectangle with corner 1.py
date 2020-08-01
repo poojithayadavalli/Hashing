@@ -30,6 +30,19 @@ Input:
 Output:
 Yes
 
+Explanation:
+here 1 0 1  forms a rectangle with corner 1
+     0 1 0
+     1 0 1
+
+Input:
+3 3
+1 0 1
+0 0 0
+1 0 1
+
+Output:
+Yes
 
 """
 def isRectangle(matrix): 
