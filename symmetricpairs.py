@@ -31,3 +31,21 @@ Output:
 5 10
 
 """
+
+def symPairs(arr, row): 
+    h = dict()
+    l=[]
+    for i in range(row):
+        first = arr[i][0] 
+        sec = arr[i][1] 
+        if (sec in h.keys() and h[sec] == first):
+            l.append(str(sec)+" "+str(first))
+  
+        else:h[first] = sec
+    for i in l:
+        print(i)
+n=int(input())
+arr=[]
+for i in range(n):
+    arr.append(list(map(int,input().split())))
+symPairs(arr,n)
