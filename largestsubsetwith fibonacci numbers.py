@@ -27,3 +27,24 @@ Input  :
 Output :
 0 2 8 5 2 1 13 23
 """
+
+def fibSubset(arr, n):
+    m= max(arr) 
+    a = 0
+    b = 1
+    hash = [] 
+    hash.append(a) 
+    hash.append(b) 
+    while (b < m):
+        c = a + b 
+        a = b 
+        b = c 
+        hash.append(b) 
+    l=[] 
+    for i in range (n): 
+        if arr[i] in hash : 
+            l.append(str(arr[i]))
+    return " ".join(l)
+n=int(input())
+arr=list(map(int,input().split()))
+print(fibSubset(arr,n))
